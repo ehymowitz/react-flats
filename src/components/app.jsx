@@ -8,7 +8,7 @@ class App extends Component {
     super(props)
 
     this.state = {
-      selectedFlat: flat[0],
+      selectedFlat: flats[0],
       flats
     };
   }
@@ -21,8 +21,8 @@ class App extends Component {
     return(
       <div>
         <FlatList
-          flats = {flats}
-          selectedFlat = {this.state.selectedFlat}
+          flats={this.state.flats}
+          selectedFlat={this.state.selectedFlat}
           selectFlat={this.selectFlat}
         />
       </div>

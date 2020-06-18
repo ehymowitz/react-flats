@@ -1,26 +1,24 @@
-import React, { Component } from 'react';
-
+import React from 'react';
 import Flat from './flat';
 
-const FlatList = ({ flats, selectedFlat, selectFlat }) => {
+const FlatList = ({ flats, selectFlat, selectedFlat }) => {
   const makeList = () => {
-    return flats.map((flat, i) => {
+    return flats.map((flat, index) => {
       return (
         <Flat
-          flat = {flats}
-          selectFlat = {selectFlat}
-          selectedFlat = {selectedFlat}
-          i = {i}
+          flat={flat}
+          index={index}
+          selectFlat={selectFlat}
         />
-      )
+      );
     });
-  }
+  };
 
-  return(
+  return (
     <div className="flat-list">
       {makeList()}
     </div>
   );
-}
+};
 
-export default FlatList
+export default FlatList;
